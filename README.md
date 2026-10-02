@@ -30,6 +30,8 @@ Release candidate **1.0.0-rc1** includes setup, Lectures 01–14, Labs 01–12, 
 
 ## Installation
 
+**Google Colab:** the original notebooks now include a setup cell before their first course import. Upload `notebooks/00_setup.ipynb` to Colab, run its first code cell, and select the root-level `vc_runtime.zip` when prompted. The same setup is included in the separate Colab editions. It loads `vc` and installs the arithmetic libraries; locally it skips Colab setup. See [the Colab guide](COLAB.md) for upload, saving, and export instructions. The original local-Jupyter workflow below is unchanged.
+
 Use Python 3.12 for the tested environment. The package requires Python 3.12 or later; the dependency snapshot was verified with CPython 3.12.9 on Linux x86_64 (glibc 2.39). Other Python versions and operating systems require their own verification. No GPU is required. Run from the repository root:
 
 ```bash

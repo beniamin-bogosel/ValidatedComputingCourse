@@ -79,6 +79,12 @@ Environment: Linux x86_64, CPython 3.12.9. Numerical stack: NumPy 2.5.3, Matplot
 
 The computations are checked on the environment above. Cross-platform installation and classroom pacing have not been piloted. Tests support the specific implementations and examples; they are not formal verification of Python or the arithmetic libraries.
 
+## Colab delivery added on 2026-10-02
+
+The [Google Colab workflow](COLAB.md) now uses an upload/setup cell in every original paired notebook, before any course imports. The Colab editions retain that same cell. The supplied `vc_runtime.zip` is imported directly; students do not install the local course package. The setup installs the numerical bindings and reuses compatible Colab plotting libraries. The cell detects Colab and skips its installation path in local Jupyter. `vc_runtime.zip` is available at the course root and in both regular and Colab distributions. The student export excludes instructor solutions, and generated outputs are cleared.
+
+The suite now has 171 passing tests, including ZIP import, repeated setup, mismatched/corrupted archives, loaded-module conflicts, source preservation, and student/instructor export boundaries. All 49 executable exported notebooks pass locally with Colab upload and package installation simulated, using the installed reviewed numerical stack; four templates receive structural checks. Student exercise cells remain intentionally skipped. This is not a hosted Colab validation; run the setup notebook and mirror example in the intended Google runtime before teaching. See the Colab guide for saving notebooks and downloading generated certificate files. The original `00_setup.ipynb` also passes a fresh-kernel Colab simulation after the setup-cell correction; all original notebooks pass local execution. Local execution logs are in `build/colab-execution.log`, `build/colab-source-execution.log`, and `build/colab-original-setup-check.log`, and archive hashes and validation scope are recorded in `dist/colab-verification.json`.
+
 ## Before classroom delivery
 
 The planned core teaching material and release stage are complete. Pilot classroom pacing and review the lab/project workload before fixing deadlines. Verify installation on any additional operating systems used by students. No additional advanced methods are required for the introductory core.

@@ -30,7 +30,7 @@ PUBLIC_FOLDERS = ("notebooks", "labs", "projects", "assignments", "templates")
 PUBLIC_NOTES = ("tucker_chapter1_examples.md", "patriot_failure_reference.md",
                 "siam_challenge_examples.md", "existing_course_review.md")
 PUBLIC_TESTS = ("test_arithmetic_environment.py", "test_notebook_workflow.py")
-COMMON_FILES = ("pyproject.toml", "requirements-lock.txt", "jupytext.toml", "syllabus.md")
+COMMON_FILES = ("pyproject.toml", "requirements-lock.txt", "jupytext.toml", "syllabus.md", "COLAB.md", "vc_runtime.zip")
 STARTER_FOLDERS = ("labs", "projects")
 FORBIDDEN_PARTS = {".venv", ".git", ".cache", "__pycache__", ".ipynb_checkpoints"}
 
@@ -53,6 +53,7 @@ def selected_files(root, audience):
         paths.extend((root / "solutions").glob("*.ipynb"))
         paths.extend((root / "solutions").glob("*.md"))
         paths.append(root / "scripts" / "release.py")
+        paths.append(root / "scripts" / "colab.py")
         paths.extend((root / "release").glob("*.md"))
         certificate = root / "build" / "certificates" / "mirror_t3.json"
         if certificate.exists():

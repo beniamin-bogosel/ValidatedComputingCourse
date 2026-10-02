@@ -14,6 +14,8 @@ Start with [00 · Setup](notebooks/00_setup.ipynb), then follow [the syllabus](s
 
 ## Install and start
 
+For Google Colab, upload any notebook from this edition and follow [the Colab guide](COLAB.md). Every notebook starts with an upload/setup cell before its course imports; select the supplied `vc_runtime.zip` when prompted. No local Python installation is needed. The instructions below are for local Jupyter.
+
 The tested environment is CPython 3.12 on Linux x86_64. Run these commands from this extracted folder:
 
 ```bash
