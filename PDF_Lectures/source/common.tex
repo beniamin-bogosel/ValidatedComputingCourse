@@ -1,0 +1,38 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=19mm,top=21mm,bottom=21mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,graphicx,microtype}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem,fancyhdr,listings,tcolorbox}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\definecolor{courseblue}{HTML}{164B69}
+\definecolor{pale}{HTML}{F0F5F7}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily\color{courseblue}VALIDATED COMPUTING}
+\fancyhead[R]{\small\sffamily Lecture \lecturenumber}
+\fancyfoot[L]{\footnotesize Expanded lecture notes \textbullet\ October 2026}
+\fancyfoot[R]{\footnotesize\thepage\ / 6}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5.5pt plus 1pt}
+\setlength{\emergencystretch}{1.5em}
+\setlist[itemize]{leftmargin=1.5em,itemsep=3pt,topsep=3pt}
+\setlist[enumerate]{leftmargin=1.7em,itemsep=5pt,topsep=4pt}
+\lstset{language=Python,basicstyle=\small\ttfamily,keywordstyle=\color{courseblue}\bfseries,
+ commentstyle=\color{OliveGreen},stringstyle=\color{BrickRed},showstringspaces=false,
+ columns=fullflexible,keepspaces=true,frame=single,rulecolor=\color{black!18},
+ backgroundcolor=\color{black!2},aboveskip=6pt,belowskip=6pt,breaklines=true,
+ xleftmargin=5pt,xrightmargin=5pt,framesep=5pt}
+\newcommand{\R}{\mathbb R}
+\newcommand{\fl}{\operatorname{fl}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\heading}[2]{\section*{\color{courseblue}#1}\vspace{-4pt}{\small\sffamily\color{black!65}#2}\par\vspace{3pt}}
+\newcommand{\opening}[2]{{\Large\sffamily\bfseries\color{courseblue}Lecture \lecturenumber\quad #1\par}\vspace{5pt}{\small #2}\par}
+\newtcolorbox{question}[1]{colback=pale,colframe=courseblue!55,boxrule=0.4pt,
+ arc=1mm,left=7pt,right=7pt,top=4pt,bottom=4pt,title={#1},fonttitle=\bfseries\small,
+ coltitle=courseblue,colbacktitle=pale}
+\newcommand{\reading}[1]{{\footnotesize\textbf{Reading and notebook.} #1\par}}
+\hypersetup{pdfauthor={Validated Computing course},pdfsubject={Expanded introductory lecture notes with questions and exercises}}

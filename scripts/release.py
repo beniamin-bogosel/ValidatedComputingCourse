@@ -37,6 +37,7 @@ FORBIDDEN_PARTS = {".venv", ".git", ".cache", "__pycache__", ".ipynb_checkpoints
 
 def selected_files(root, audience):
     paths = [root / name for name in COMMON_FILES]
+    paths.extend((root / "PDF_Lectures").glob("lecture*.pdf"))
     for folder in PUBLIC_FOLDERS:
         for extension in ("*.py", "*.ipynb", "*.md"):
             paths.extend((root / folder).glob(extension))
@@ -247,7 +248,9 @@ def audit(root):
             raise ValueError(f"Release hash mismatch: {name}")
         if any(part in FORBIDDEN_PARTS for part in path.relative_to(root).parts):
             raise ValueError(f"Private/runtime directory in release: {name}")
-        if path.suffix in (".pdf", ".pyc"):
+        lecture_pdf = (path.parent == root / "PDF_Lectures"
+                       and path.match("lecture*.pdf"))
+        if path.suffix == ".pyc" or (path.suffix == ".pdf" and not lecture_pdf):
             raise ValueError(f"Excluded file type: {name}")
         if manifest["audience"] == "student" and ("solutions" in path.relative_to(root).parts or "_solution" in path.name):
             raise ValueError(f"Instructor material in student release: {name}")

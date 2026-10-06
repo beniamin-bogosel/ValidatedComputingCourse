@@ -6,23 +6,23 @@ Release candidate **1.0.0-rc1** includes setup, Lectures 01–14, Labs 01–12, 
 
 ## Start here
 
-| Material | Notebook | Lab |
-|---|---|---|
-| Environment and arithmetic smoke checks | [00 · Setup](notebooks/00_setup.ipynb) | Ungraded |
-| Approximation, evidence, and certificates | [01 · Why validated computing?](notebooks/01_intro.ipynb) | [Lab 01](labs/lab01_intro.ipynb) |
-| Representation, spacing, and rounding | [02 · Floating-point arithmetic](notebooks/02_floating_point.ipynb) | [Lab 02](labs/lab02_floating_point.ipynb) |
-| Error, conditioning, and cancellation | [03 · Stability](notebooks/03_stability.ipynb) | [Lab 03](labs/lab03_stability.ipynb) |
-| Exact interval sets and operations | [04 · Interval basics](notebooks/04_interval_basics.ipynb) | [Lab 04](labs/lab04_interval_basics.ipynb) |
-| Machine bounds and Arb conversion | [05 · Directed rounding](notebooks/05_directed_rounding.ipynb) | [Lab 05](labs/lab05_directed_rounding.ipynb) |
-| Dependency and covering subdivisions | [06 · Dependency](notebooks/06_dependency.ipynb) | [Lab 06](labs/lab06_dependency.ipynb) |
-| Derivatives and adaptive bounds | [07 · Better enclosures](notebooks/07_better_enclosures.ipynb) | [Lab 07](labs/lab07_better_enclosures.ipynb) |
-| Derivatives through expression rules | [08 · Automatic differentiation](notebooks/08_automatic_differentiation.ipynb) | [Lab 08](labs/lab08_automatic_differentiation.ipynb) |
-| Exclusion, roots, and search completeness | [09 · Validated roots](notebooks/09_validated_roots.ipynb) | [Lab 09](labs/lab09_validated_roots.ipynb) |
-| Local existence and uniqueness in a box | [10 · Nonlinear systems](notebooks/10_nonlinear_systems.ipynb) | [Lab 10](labs/lab10_nonlinear_systems.ipynb) |
-| Minimum bounds and all minimizers | [11 · Global optimization](notebooks/11_global_optimization.ipynb) | [Lab 11](labs/lab11_global_optimization.ipynb) |
-| Reliable geometric decisions | [12 · Robust geometry](notebooks/12_robust_geometry.ipynb) | [Lab 12](labs/lab12_robust_geometry.ipynb) |
-| Reproduction, assumptions, and coverage | [13 · Certificate audit](notebooks/13_certificate_audit.ipynb) | [Peer audit](assignments/peer_audit.ipynb) |
-| Scope, limitations, and demonstrations | [14 · Synthesis](notebooks/14_synthesis.ipynb) | Project demonstrations |
+| Material | Notebook | Lab | Lecture Notes |
+|---|---|---|---|
+| Environment and arithmetic smoke checks | [00 · Setup](notebooks/00_setup.ipynb) | Ungraded | — |
+| Approximation, evidence, and certificates | [01 · Why validated computing?](notebooks/01_intro.ipynb) | [Lab 01](labs/lab01_intro.ipynb) | [PDF 01](PDF_Lectures/lecture01_certificates.pdf) |
+| Representation, spacing, and rounding | [02 · Floating-point arithmetic](notebooks/02_floating_point.ipynb) | [Lab 02](labs/lab02_floating_point.ipynb) | [PDF 02](PDF_Lectures/lecture02_floating_point.pdf) |
+| Error, conditioning, and cancellation | [03 · Stability](notebooks/03_stability.ipynb) | [Lab 03](labs/lab03_stability.ipynb) | [PDF 03](PDF_Lectures/lecture03_stability.pdf) |
+| Exact interval sets and operations | [04 · Interval basics](notebooks/04_interval_basics.ipynb) | [Lab 04](labs/lab04_interval_basics.ipynb) | [PDF 04](PDF_Lectures/lecture04_interval_arithmetic.pdf) |
+| Machine bounds and Arb conversion | [05 · Directed rounding](notebooks/05_directed_rounding.ipynb) | [Lab 05](labs/lab05_directed_rounding.ipynb) | [PDF 05](PDF_Lectures/lecture05_outward_rounding.pdf) |
+| Dependency and covering subdivisions | [06 · Dependency](notebooks/06_dependency.ipynb) | [Lab 06](labs/lab06_dependency.ipynb) | [PDF 06](PDF_Lectures/lecture06_dependency_subdivision.pdf) |
+| Derivatives and adaptive bounds | [07 · Better enclosures](notebooks/07_better_enclosures.ipynb) | [Lab 07](labs/lab07_better_enclosures.ipynb) | — |
+| Derivatives through expression rules | [08 · Automatic differentiation](notebooks/08_automatic_differentiation.ipynb) | [Lab 08](labs/lab08_automatic_differentiation.ipynb) | — |
+| Exclusion, roots, and search completeness | [09 · Validated roots](notebooks/09_validated_roots.ipynb) | [Lab 09](labs/lab09_validated_roots.ipynb) | — |
+| Local existence and uniqueness in a box | [10 · Nonlinear systems](notebooks/10_nonlinear_systems.ipynb) | [Lab 10](labs/lab10_nonlinear_systems.ipynb) | — |
+| Minimum bounds and all minimizers | [11 · Global optimization](notebooks/11_global_optimization.ipynb) | [Lab 11](labs/lab11_global_optimization.ipynb) | — |
+| Reliable geometric decisions | [12 · Robust geometry](notebooks/12_robust_geometry.ipynb) | [Lab 12](labs/lab12_robust_geometry.ipynb) | — |
+| Reproduction, assumptions, and coverage | [13 · Certificate audit](notebooks/13_certificate_audit.ipynb) | [Peer audit](assignments/peer_audit.ipynb) | — |
+| Scope, limitations, and demonstrations | [14 · Synthesis](notebooks/14_synthesis.ipynb) | Project demonstrations | — |
 
 [Concept check 01–03](assignments/concept_checks_01_03.ipynb) · [Concept check 04–07](assignments/concept_checks_04_07.ipynb) · [Concept check 08–11](assignments/concept_checks_08_11.ipynb) · [Reading references](references.md)
 
