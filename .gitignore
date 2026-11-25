@@ -10,3 +10,6 @@ dist/
 .cache/
 Doc/*.pdf
 
+
+# Lecture notes and attendance lists (kept local)
+Notes2026/
