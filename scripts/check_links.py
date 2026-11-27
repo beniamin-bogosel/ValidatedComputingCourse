@@ -10,7 +10,8 @@ import nbformat
 
 
 ROOT = Path(__file__).resolve().parents[1]
-FOLDERS = ("notebooks", "labs", "projects", "assignments", "solutions", "templates", "Doc")
+FOLDERS = ("notebooks", "labs", "projects", "assignments", "solutions", "templates", "Doc",
+           "applications")
 
 
 def markdown_links(source):

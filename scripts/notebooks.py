@@ -17,7 +17,8 @@ from jupyter_client import KernelManager
 from nbclient import NotebookClient
 
 ROOT = Path(__file__).resolve().parents[1]
-FOLDERS = ("notebooks", "labs", "solutions", "templates", "assignments", "projects")
+FOLDERS = ("notebooks", "labs", "solutions", "templates", "assignments", "projects",
+           "applications")
 KERNEL = {"display_name": "Python (Validated Computing)", "language": "python",
           "name": "validated-computing"}
 
@@ -26,8 +27,13 @@ def signature(nb):
     return [(c.cell_type, c.source, list(c.metadata.get("tags", []))) for c in nb.cells]
 
 
+def is_source(path):
+    """Notebook sources; applications/ also holds a plain build script."""
+    return path.parent.name != "applications" or path.stem.startswith("app")
+
+
 def sources():
-    return sorted(p for folder in FOLDERS for p in (ROOT / folder).glob("*.py"))
+    return sorted(p for folder in FOLDERS for p in (ROOT / folder).glob("*.py") if is_source(p))
 
 
 def configure(nb, folder):
@@ -35,7 +41,8 @@ def configure(nb, folder):
     nb.metadata["course"] = {"kind": {"notebooks": "lecture", "labs": "student_lab",
                                       "solutions": "instructor_solution",
                                       "templates": "template", "assignments": "assessment",
-                                      "projects": "student_project"}[folder]}
+                                      "projects": "student_project",
+                                      "applications": "application"}[folder]}
     nb.metadata["jupytext"] = {
         "formats": "ipynb,py:percent",
         "notebook_metadata_filter": "kernelspec,jupytext,course",
